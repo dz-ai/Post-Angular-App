@@ -1,0 +1,18 @@
+<section class="sign-log-in">
+  <h2>Log In</h2>
+  <div class="sign-log-fields">
+    <label for="name">User Name</label>
+    <input id="name" #name>
+  </div>
+  <div class="sign-log-fields">
+    <label for="email">User Email</label>
+    <input id="email" #email>
+  </div>
+  <div class="sign-log-fields">
+    <label for="pass">Password</label>
+    <input type="password" id="pass" #pass>
+  </div>
+  <input id="log-button" (click)="logInUser({ username: name.value, email: email.value, pass: pass.value})" type="button" value="Log-in">
+<!--  <p *ngIf="message">{{ message.message }}</p>-->
+</section>
+

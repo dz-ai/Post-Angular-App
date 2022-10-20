@@ -1,0 +1,11 @@
+<div id="time-line-header-wrapper">
+  <h2>Time Line</h2>
+</div>
+<hr>
+
+<face-new-post *ngIf="status.isLogin | async"></face-new-post>
+
+<face-post [post]="post"  *ngFor="let post of status.showPosts"></face-post>
+
+
+

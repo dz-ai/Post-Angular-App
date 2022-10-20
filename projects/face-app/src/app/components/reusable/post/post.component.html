@@ -1,0 +1,20 @@
+<div class="post-comp">
+  <div class="post-time-username">
+    <p>{{ post.createdAt | date:'short' }}</p>
+    <h3>{{ post.username }}</h3>
+  </div>
+  <p class="post-content">{{ post.post }}</p>
+  <section *ngIf="status.isLogin | async" class="leave-comment-section">
+    <label for="leave-comment-input">Comment:</label><br>
+      <textarea name="comment" id="leave-comment-input"
+                placeholder="pleas leave a comment"
+                rows="1"
+                onkeyup="textAreaAdjust(this)">
+      </textarea>
+    <input type="button" value="Comment">
+  </section>
+  <section class="all-comments">
+    <input type="button" value="Show comments">
+  </section>
+</div>
+  <hr>

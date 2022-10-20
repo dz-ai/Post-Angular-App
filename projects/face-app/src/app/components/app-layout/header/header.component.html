@@ -1,0 +1,13 @@
+<h1>My FaceBook App</h1>
+
+
+<div class="sign-log-wrapper">
+
+  <div *ngIf="status.isLogin | async" id="username-logout-wrapper">
+    <a (click)="server.getUserPosts()"><h4>{{ status.loginUser }}</h4></a>
+    <input id="logout-button" type="button" value="logout" (click)="status.logout()">
+  </div>
+
+    <a routerLink="/sign-in"><input id="sing-button" type="button" value="sign-in"></a>
+    <a routerLink="/log-in"><input id="log-button" type="button" value="log-in"></a>
+</div>

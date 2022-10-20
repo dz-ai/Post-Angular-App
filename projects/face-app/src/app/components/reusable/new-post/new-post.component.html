@@ -1,0 +1,9 @@
+<section id="new-post-section">
+  <h3>Post Something</h3>
+  <div id="new-post-wrapper">
+    <textarea onkeyup="textAreaAdjust(this)" #newPost></textarea>
+    <input id="new-post-button" type="button" value="Post" (click)="onNewPost(newPost.value); newPost.value=''">
+  </div>
+</section>
+<hr>
+
